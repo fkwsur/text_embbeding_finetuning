@@ -8,7 +8,7 @@ def process_embedding():
     data = request.json
     model = SentenceTransformer('./hyunji_embbeding', trust_remote_code=True)
     embd = model.encode(data['data'])
-    result = {"embedding": embd.tolist()}  # 임시 결과
+    result = {"embedding": embd.tolist()}
     return jsonify(result)
 
 if __name__ == '__main__':
